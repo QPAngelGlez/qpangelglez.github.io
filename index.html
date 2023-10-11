@@ -316,6 +316,18 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<!-- Procesamiento de URL para lectura -->
+			<script>
+				var myID = '#urlangel';
+				document.addEventListener("DOMContentLoaded", function() {
+					var urlStrng = $(myID).text(); urlStrng = replaceAll(urlStrng,'&','$'); $(myID).html(urlStrng);
+				});
+				function escapeRegExp(string){ return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); } 
+				function replaceAll(str, term, replacement) {	return str.replace(new RegExp(escapeRegExp(term), 'g'), replacement); }
+			</script>
+
+			<!-- JS QuestionPro -->
 			<script type="text/javascript">window.QPROSurvey = {};window.QPROSurvey.settings = {inID : "fPUimZBoP", segmentCode : "S1", appURL : "https://www.questionpro.com"};</script>
 			<script src="https://www.questionpro.com/javascript/min/in.js"></script>
 			<noscript><a href="https://www.questionpro.com">https://www.questionpro.com</a></noscript>
