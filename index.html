@@ -16,7 +16,7 @@
     		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		<style>
-			#lightboxBodyDiv{left:25%; !important;}
+			/* #lightboxBodyDiv{left:25%; !important;} */
 		</style>
 	</head>
 	<body class="homepage is-preload">
@@ -330,7 +330,13 @@
 				});
 				function escapeRegExp(string){ return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); } 
 				function replaceAll(str, term, replacement) {	return str.replace(new RegExp(escapeRegExp(term), 'g'), replacement); }
-				//setInterval(function() { $('#lightboxBodyDiv').css({'left':'25%'}); }, 1000);				
+				//setInterval(function() { $('#lightboxBodyDiv').css({'left':'25%'}); }, 1000);	
+
+				//Para la adecuacion visual del Intercept				
+				$('.survey-height-ios').css({"height":"100%","background-color":"#F9F0D2"});
+				$('#lightboxBodyDiv').css({"width":"110%", "height":"80%","box-shadow":"none"});
+				$('#lightboxOverlay').css({"display":"none"});
+			
 			</script>
 
 			<!-- JS QuestionPro -->
