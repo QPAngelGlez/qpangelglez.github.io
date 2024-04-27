@@ -116,15 +116,20 @@
 			<script>
 				//Para la adecuacion visual del Intercept
 				setTimeout(function(){ 
+					//Estilo para quitar fondo y color general a la encuesta
 					$('.survey-height-ios').css({"height":"100%","background-color":"#F9F0D2"});
 					$('#lightboxOverlay').css({"display":"none"});	
-
+				
+					//Estilos para pasar la encuesta de enfrente al body
 					$('#lightboxBodyDiv').parent().attr("id","QProContains");
 					$('#main').html($('#QProContains').html());
 					$('#QProContains').html('');
-
+				
+					//Estilo para omitir todo estilo previo y dejarlo como parte de la página
+					$('#main').css({"padding":"0px"});
+					$('#lightboxBodyDiv').attr('style', '');
 					$('#lightboxBodyDiv').css({"width":"110%", "height":"600px","box-shadow":"none"});
-				}, 3000);							
+				}, 2000);									
 			</script>
 
 			<!-- JS QuestionPro -->
