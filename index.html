@@ -118,7 +118,7 @@
 				setTimeout(function(){ 
 					//Estilo para quitar fondo y color general a la encuesta
 					$('.survey-height-ios').css({"height":"100%","background-color":"#F9F0D2"});
-					$('#lightboxOverlay').css({"display":"none"});	
+					$('#lightboxOverlay').css({"display":"none"});	$('#lightboxBodyDiv .btn-close').css({"display":"none"});	
 				
 					//Estilos para pasar la encuesta de enfrente al body
 					$('#lightboxBodyDiv').parent().attr("id","QProContains");
@@ -127,8 +127,8 @@
 				
 					//Estilo para omitir todo estilo previo y dejarlo como parte de la página
 					$('#main').css({"padding":"0px","border":"35px 0px 0px 0px"});
-					$('#lightboxBodyDiv').attr('style', '');
-					$('#lightboxBodyDiv').css({"width":"130%", "height":"800px","box-shadow":"none"});
+					$('#lightboxBodyDiv').attr('style', ''); $('#lightboxBodyDiv').removeClass("survey-light-box");
+					$('#lightboxBodyDiv').css({"width":"auto", "height":"800px","box-shadow":"none"});
 				}, 2000);									
 			</script>
 
