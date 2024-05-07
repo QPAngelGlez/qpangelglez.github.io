@@ -113,7 +113,24 @@
 			<script src="assets/js/main.js"></script>
 			
 			<!-- Procesamiento de URL para lectura -->
-			<!-- Se deja en la encuesta -->
+			<script>
+				//Para la adecuacion visual del Intercept
+				setTimeout(function(){ 
+					//Estilo para quitar fondo y color general a la encuesta
+					$('.survey-height-ios').css({"height":"100%","background-color":"#F9F0D2"}); //AJUSTE ENCUESTA
+					$('#lightboxOverlay').css({"display":"none"});	$('#lightboxBodyDiv .btn-close').css({"display":"none"}); //AJUSTE ENCUESTA	
+				
+					//Estilos para pasar la encuesta de enfrente al body
+					$('#lightboxBodyDiv').parent().attr("id","QProContains"); //AJUSTE ENCUESTA
+					$('#main').html($('#QProContains').html()); //AJUSTE ENCUESTA
+					$('#QProContains').html(''); //AJUSTE ENCUESTA
+				
+					//Estilo para omitir todo estilo previo y dejarlo como parte de la página
+					$('#main').css({"padding":"30px 10px","border":"35px 0px 0px 0px","background-color":"#f9f0d2"}); //AJUSTE CONTENEDOR
+					$('#lightboxBodyDiv').attr('style', ''); $('#lightboxBodyDiv').removeClass("survey-light-box"); //AJUSTE ENCUESTA
+					$('#lightboxBodyDiv').css({"width":"auto", "height":"800px","box-shadow":"none"}); //AJUSTE ENCUESTA
+				}, 2000);									
+			</script>
 
 			<!-- JS QuestionPro -->
 			<script type="text/javascript">window.QPROSurvey = {};window.QPROSurvey.settings = {inID : "fPUimZB0z", segmentCode : "S1", appURL : "https://embed.questionpro.com"};</script>
