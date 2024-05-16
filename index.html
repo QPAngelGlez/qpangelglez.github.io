@@ -134,7 +134,41 @@
 
 			<!-- JS QuestionPro -->
 			<script type="text/javascript">window.QPROSurvey = {};window.QPROSurvey.settings = {inID : "fPUimZB0z", segmentCode : "S1", appURL : "https://embed.questionpro.com"};</script>
-			<script src="https://embed.questionpro.com/javascript/min/in.js"></script>
+			<!-- <script src="https://embed.questionpro.com/javascript/min/in.js"></script> -->
+			
+			<script type="text/javascript">
+
+				var isQProMobile = -1 != navigator.userAgent.toLowerCase().search("mobile") && -1 == navigator.userAgent.toLowerCase().search("ipad"),
+    is_chrome = navigator.userAgent.toLowerCase().indexOf("chrome") > -1,
+    defaultDomain = "https://www.questionpro.com",
+    interceptVersion = "1.4";
+
+window.QPROSurvey || (window.QPROSurvey = {}, window.QPROSurvey.settings = {
+    inID: inID,
+    segmentCode: segmentCode,
+    appURL: appURL
+}, domain && (domain = domain.replace("/a/", ""), window.QPROSurvey.settings.domain = domain), console.warn("Deprecation Warning: New version of the embed code is available.")), window.QPROSurvey.settings.domain || (window.QPROSurvey.settings.domain = defaultDomain), window.QPROSurvey.settings.appURL ? window.QPROSurvey.settings.domain = window.QPROSurvey.settings.appURL : console.warn("Deprecation Warning: New version of the embed code is available.");
+
+(function (a) {
+    window.QPROSurvey.settings.domain || (window.QPROSurvey.settings.domain = window.QPROSurvey.settings.appURL ? window.QPROSurvey.settings.appURL : defaultDomain);
+    var b = document.createElement("link");
+    b.setAttribute("type", "text/css");
+    b.setAttribute("href", a.domain + "/stylesheets/intercept/intercept.css");
+    b.setAttribute("rel", "stylesheet");
+    document.body.appendChild(b);
+
+    var d = document.createElement("script");
+    d.setAttribute("src", a.domain + "/javascript/min/intercept.js?version=" + interceptVersion);
+    d.onload = function () {
+        document.body.appendChild(d)
+    };
+
+    document.body.appendChild(d);
+})(window.QPROSurvey.settings);
+
+
+			</script>
+
 			<noscript><a href="https://embed.questionpro.com">https://embed.questionpro.com</a></noscript>
 
 	</body>
