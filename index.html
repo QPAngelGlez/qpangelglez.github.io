@@ -112,28 +112,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			
-			<!-- Procesamiento de URL para lectura -->
-			<script>
-				//Para la adecuacion visual del Intercept
-				setTimeout(function(){ 
-					//Estilo para quitar fondo y color general a la encuesta
-					$('.survey-height-ios').css({"height":"100%","background-color":"#F9F0D2"}); //AJUSTE ENCUESTA
-					$('#lightboxOverlay').css({"display":"none"});	$('#lightboxBodyDiv .btn-close').css({"display":"none"}); //AJUSTE ENCUESTA	
-				
-					//Estilos para pasar la encuesta de enfrente al body
-					$('#lightboxBodyDiv').parent().attr("id","QProContains"); //AJUSTE ENCUESTA
-					$('#main').html($('#QProContains').html()); //AJUSTE ENCUESTA
-					$('#QProContains').html(''); //AJUSTE ENCUESTA
-				
-					//Estilo para omitir todo estilo previo y dejarlo como parte de la página
-					$('#main').css({"padding":"30px 10px","border":"35px 0px 0px 0px","background-color":"#f9f0d2"}); //AJUSTE CONTENEDOR
-					$('#lightboxBodyDiv').attr('style', ''); $('#lightboxBodyDiv').removeClass("survey-light-box"); //AJUSTE ENCUESTA
-					$('#lightboxBodyDiv').css({"width":"auto", "height":"800px","box-shadow":"none"}); //AJUSTE ENCUESTA
-				}, 2000);									
-			</script>
-
 			<!-- JS QuestionPro -->
-			
     <!-- Start of async Intercept tracking code -->
     <script type="text/javascript" src="https://intercept-widget.questionpro.com/static/js/loader.js"></script>
     <script type="text/javascript"> 
