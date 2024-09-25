@@ -121,5 +121,16 @@
     </script>
     <!-- End of async Intercept tracking code -->
 
+
+    <script type="text/javascript"> 
+       window.addEventListener('message', function(event) {
+    		if (event.origin === '*') {
+        		if (event.data === 'reload') {
+            			//location.reload();  // Recargar la página padre
+        		}
+    		}
+	});
+    </script>
+
 	</body>
 </html>
